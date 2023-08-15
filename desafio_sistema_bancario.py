@@ -35,15 +35,6 @@ while True:
         else:    
             print("Valor inválido! Retornando para o menu principal\n")
 
-    elif opcao == "e":
-        if not extrato:
-            print("Não foram realizadas operações.\n")
-        else:
-            extrato += f"Saldo em conta: R$ {saldo:.2f}\n"
-            print("============EXTRATO============\n")
-            print(extrato)
-            print("===============================")
-
     elif opcao == "s":
 
         if numero_saques <= 0:
@@ -63,6 +54,15 @@ while True:
                 extrato += f"Saque no valor de: R${valor_saque:.2f}.\n"
                 print(f"Saque no valor de R${valor_saque:.2f} foi realizado em sua conta.\n")
     
+    elif opcao == "e":
+        if not extrato:
+            print("Não foram realizadas operações.\n")
+        else:
+            extrato += f"Saldo em conta: R$ {saldo:.2f}\n"
+            print("============EXTRATO============\n")
+            print(extrato)
+            print("===============================")
+
     elif opcao == "q":
         break
     
